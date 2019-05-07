@@ -5,19 +5,19 @@ This buildpack installs
  (the Selenium driver for Firefox) in a Heroku slug.
  
  This buildpack only installs the `geckodriver` binary. To use Selenium with Firefox
- on Heroku, you'll also need Firefox. This is the suggested buildpack:
+ on Heroku, you'll also need Firefox. It is suggested you use the apt-buildpack from Heroku to apt install firefox & associated dependencies
  
- - [firefox-buildpack](https://github.com/buitron/firefox-buildpack) 
+
 
 # Usage
 
 Example usage:
 
 ```shell
-$ heroku create [appname] --buildpack http://github.com/buitron/geckodriver-buildpack
+$ heroku create [appname] --buildpack https://github.com/sfortunato/geckodriver-buildpack.git
 
 # or if your app is already created:
-$ heroku buildpacks:add http://github.com/buitron/geckodriver-buildpack
+$ heroku buildpacks:add https://github.com/sfortunato/geckodriver-buildpack.git
 
 $ git push heroku master
 ```
